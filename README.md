@@ -187,6 +187,14 @@ http://localhost:3000/api/{service-name}/{controller-name}/{id?}
 
 ---
 
+## Service to Service communication
+
+1. The communications happens with RabbitMQ, using the functions on the helper library.
+2. For asynchronous requests (that you don't need response) you can use the `sendAsync` method
+3. For synchronous requests (that you need the response from the service) you can use the `sendRPC` method
+4. Both methods are showcased in anotherController inside service-two accessing service-one
+---
+
 ## Adding a New Service
 
 1. Create a new folder (e.g., `service-three`) with an `index.js` and any required controllers.
