@@ -79,7 +79,7 @@ This project demonstrates a simple microservice architecture where:
 
 3. Install the root-level dependencies (for `npm-run-all`):
    ```bash
-   npm install
+   pnpm install
    ```
 
 ---
@@ -88,7 +88,7 @@ This project demonstrates a simple microservice architecture where:
 
 Start the API Gateway, Service One, and Service Two simultaneously:
 ```bash
-npm start
+pnpm start
 ```
 
 ---

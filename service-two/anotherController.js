@@ -1,6 +1,15 @@
+const { sendRPC, sendAsync } = require("../lib/rabbitmq-helper");
+
 const anotherController = {
   async getByIdAction(id) {
     // Simulate fetching a resource by ID
+
+    // use sendRPC to call another service and await for the response
+    const serviceOneResponse = await sendRPC("service-one", "exampleController", "getByIdAction", [
+      1,
+    ]);
+
+    console.log("serviceOneResponse", serviceOneResponse);
     return { message: `Service Two: Fetched item with ID ${id}`, item: { id, name: "Item Two" } };
   },
   async getAllAction(params) {
@@ -13,6 +22,9 @@ const anotherController = {
   },
   async postAction(params) {
     // Simulate creating a new resource
+
+    // use sendAsync to call another service without waiting for the response
+    sendAsync("service-one", "exampleController", "postAction", [{ name: "Item Two" }]);
     return { message: "Service Two: Created a new item", createdItem: { id: 2, ...params } };
   },
   async putAction(id, params) {

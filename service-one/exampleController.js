@@ -13,6 +13,9 @@ const exampleController = {
   },
   async postAction(params) {
     // Simulate creating a new resource
+
+    console.log("Service One: Creating a new item", params);
+
     return { message: "Service One: Created a new item", createdItem: { id: 1, ...params } };
   },
   async putAction(id, params) {
