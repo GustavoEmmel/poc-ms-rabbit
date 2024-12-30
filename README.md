@@ -42,18 +42,15 @@ This project demonstrates a simple microservice architecture where:
 ```
 .
 ├── api-gateway/
-│   ├── index.js
-│   └── package.json
+│   └── index.js
 ├── lib/
 │   ├── rabbitmq-helper.js
 ├── service-one/
 │   ├── index.js
-│   ├── exampleController.js
-│   └── package.json
+│   └── exampleController.js
 ├── service-two/
 │   ├── index.js
-│   ├── anotherController.js
-│   └── package.json
+│   └── anotherController.js
 └── package.json
 ```
 
