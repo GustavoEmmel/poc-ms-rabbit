@@ -44,7 +44,7 @@ This project demonstrates a simple microservice architecture where:
 ├── api-gateway/
 │   └── index.js
 ├── lib/
-│   ├── rabbitmq-helper.js
+│   └── rabbitmq-helper.js
 ├── service-one/
 │   ├── index.js
 │   └── exampleController.js
